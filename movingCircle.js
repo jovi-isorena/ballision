@@ -71,7 +71,7 @@ window.addEventListener("resize", function(){
 
 window.addEventListener("load", function(){
     
-    imageObj.src = "cash.png";
+    imageObj.src = "maybel.png";
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight * 0.7;
     document.querySelector("#txtNum").innerText = num.value;
@@ -144,7 +144,7 @@ class Circle {
             c.stroke();
             c.fillStyle = this.fll;
             c.fill();
-            // c.drawImage(imageObj,this.x-this.r*2, this.y-this.r*2, this.r*4, this.r*4);
+            c.drawImage(imageObj,this.x-this.r*2, this.y-this.r*2, this.r*4, this.r*4);
         };
 
         //---change coordinate of this circle and redraw in canvas
