@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* background-color: black; */
+}
+
+canvas{
+    border: 1px black solid;
+    background-color: lightgrey;
+    
+    
+}
+
+.main{
+    height:25vh;
+    grid-template-rows: 1fr 1fr;
+
+}
+
+.sub{
+    display: inline-block;
+    padding: 1px 12px;
+    justify-items: center;
+    vertical-align: top;
+}
+
+#generate{
+    margin-top: 3px;
+    padding: 5px;
+    border-radius: 3px;
+    color: green;
+    background-color: white;
+    border: 2px green solid;
+
+}
+
+input[type='range']{
+    /* width: 1em; */
+}
+
+#generate:hover{
+    color: white;
+    background-color: green;
+    /* border: 2px white solid; */
+}

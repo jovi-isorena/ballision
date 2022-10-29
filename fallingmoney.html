@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <link rel="stylesheet" type="text/css" href="canvas.css">
+</head>
+<body>
+    <div class="main">
+        <center><h3>Ballision Prototype</h3></center>
+        <div class="sub">
+            <!-- <strong>Counter:</strong><b></b><br> -->
+            Number: <label id="txtNum"></label><br>
+            <input type="range" name="" id="num" value="100" min="1" max="500"><br>
+            Radius: <label id="txtRad"></label><br>
+            <input type="range" name="" id="rad" value="15" min="1" max="50"><br>
+            Radius Variation: <label id="txtRadVar"></label><br>
+            <input type="range" name="" id="radvar" value="1" min="1" max="100"><br>
+            Speed Variation: <label id="txtSpdVar"></label><br>
+            <input type="range" name="" id="speedvar" value="4" min="1" max="20"><br>
+        </div>
+        <!-- <div class="sub">
+
+            
+            
+            
+        </div> -->
+        <div class="sub">
+            <!-- speed: <input type="number" name="" id="speed" value="4"> -->
+            <button id="generate">Generate</button><br><br><br>
+            <input type="checkbox" id="nofx" name="rad" >  No Effect<br><br>
+            <input type="checkbox" id="collision" name="rad" checked>  Enable Collision<br><br>
+            <input type="checkbox" id="gravity" name="rad" checked>  Enable Gravity<br>
+            
+        </div>
+        
+   
+    
+
+    </div>
+    
+
+    <canvas></canvas>
+    <!-- <script src="canvas.js"></script> -->
+    <script src="fallingmoney.js"></script>
+</body>
+</html>
