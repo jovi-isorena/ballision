@@ -12,9 +12,10 @@ canvas{
 }
 
 .main{
-    height:25vh;
+    min-height:25vh;
+    height: fit-content;
     grid-template-rows: 1fr 1fr;
-
+    text-align: center;
 }
 
 .sub{
