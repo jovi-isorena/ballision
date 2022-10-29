@@ -6,8 +6,8 @@
 
 canvas{
     border: 1px black solid;
-    background-color: lightgrey;
-    
+    background-color: rgb(48, 48, 48);
+    background-image: url('space.jpg');
     
 }
 
