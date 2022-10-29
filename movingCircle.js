@@ -11,7 +11,7 @@ const speedvar = document.querySelector("#speedvar");
 const col = document.querySelector("#collision");
 const grav = document.querySelector("#gravity");
 let imageObj = new Image();
-
+let imageSrcArr = ['maybel.png','maybel2.png','maybel3.png','maybel4.png'];
 
 grav.addEventListener("click", ()=>{
     if(!grav.checked) create();
@@ -71,7 +71,8 @@ window.addEventListener("resize", function(){
 
 window.addEventListener("load", function(){
     
-    imageObj.src = "maybel.png";
+    // imageObj.src = "maybel.png";
+    // imageArr.push(imageObj);
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight * 0.7;
     document.querySelector("#txtNum").innerText = num.value;
@@ -121,7 +122,7 @@ canvas.addEventListener('mouseleave',
         mouse.y = undefined;
 });
 class Circle {
-    constructor(x, y, r, dx, dy, str, fll) {
+    constructor(x, y, r, dx, dy, str, fll, img=null) {
         this.x = x;
         this.y = y;
         this.or = this.r = r;
@@ -144,7 +145,12 @@ class Circle {
             c.stroke();
             c.fillStyle = this.fll;
             c.fill();
-            c.drawImage(imageObj,this.x-this.r*2, this.y-this.r*2, this.r*4, this.r*4);
+            if(img !== null){
+                let newImg = new Image();
+                newImg.src = img;
+                c.drawImage(newImg,this.x-this.r*2, this.y-this.r*2, this.r*4, this.r*4);
+            }
+
         };
 
         //---change coordinate of this circle and redraw in canvas
@@ -283,7 +289,8 @@ function create(){
                 // }
             }
         }
-        arrCircle.push(new Circle(x,y,r,dx,dy,arrColor[index%arrColor.length],arrColor[index%arrColor.length]));
+        let imgSrc = imageSrcArr[index%imageSrcArr.length];
+        arrCircle.push(new Circle(x,y,r,dx,dy,arrColor[index%arrColor.length],arrColor[index%arrColor.length],imgSrc));
         
     }
     arrCircle.forEach(element => {
